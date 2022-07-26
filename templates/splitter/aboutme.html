@@ -1,0 +1,80 @@
+{% extends 'splitter/base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/login_signup.css' %}">
+{% endblock %}
+{% block content %}
+
+{% if messages %}
+<div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {% for message in messages %}
+        <div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+      {% endfor %}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+</div>
+{% endif %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/aboutme.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+      <div class="circles"></div>
+      <div class="details-container">
+          <div class="avatar">
+              
+                <img class = "sexyclass" src="{% static 'images/shrey208.jpg' %}" alt="">
+             
+          </div>
+          <div class="about">
+              <div class="name">
+                  <p>
+                      Hello There!
+                  </p>
+                  <h1>
+                      I'm Shreyansh Gupta
+                  </h1>
+              </div>
+              <div class="about-content">
+                  <p>
+                    Self-driven, quick starter, passionate programmer with a curious mind 
+                    who enjoys solving a complex and challenging real-world problems.
+                  </p>
+                  <a href="https://drive.google.com/file/d/1nnRHqeBEmDYqLcokwzE7AHWHOnvr4Ugu/view">
+                    <button>Resume</button>
+                    </a> 
+                    
+                    <a href="https://shrey208.github.io/#contact">
+                      <button style="
+                      margin-top: 1rem;
+                  ">Contact Me</button>
+                      </a> 
+                   
+              </div>
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="skills-container">
+        <a href="https://shrey208.github.io">
+          <button>Pythonist</button>
+          </a> 
+          <a href="https://shrey208.github.io">
+            <button>Fast Learner</button>
+            </a> 
+          <a href="https://shrey208.github.io">
+            <button>Data Enthusiast</button>
+            </a> 
+      </div>
+  </div> 
+
+
+{% endblock %}
