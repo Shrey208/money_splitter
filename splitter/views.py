@@ -187,7 +187,7 @@ def create_transaction(request,pk):
                             final_objs.save()
             return HttpResponseRedirect(reverse('splitter:room_detail',kwargs={'pk':pk}))
         except:
-            messages.error(request, "Details do not match the specified data type. (Hint: amount should be integer cuz we ain't Shreyansh)")
+            messages.error(request, "Details do not match the specified data type. (Hint: amount should be integer)")
             return HttpResponseRedirect(reverse('splitter:room_detail',kwargs={'pk':pk}))
     # return render(request,'splitter/create_transaction.html',{'members':members,'rooms':rooms})
 
